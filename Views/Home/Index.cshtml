@@ -17,38 +17,42 @@
                     <th>SKUID</th>
                     <th>UnitPrice</th>
                     <th>No of Unit</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>A</td>
                     <td>50</td>
-                    <td></td>
+                    <td>@Html.EditorFor(x => x.A, new { @type = "number", @min = "0",  @value = "0" })</td>
                 </tr>
                 <tr>
                     <td>B</td>
                     <td>30</td>
-                    <td> </td>
+                    <td>@Html.EditorFor(x => x.B)</td>
                 </tr>
                 <tr>
                     <td>C</td>
                     <td>20</td>
-                    <td> </td>
+                    <td>@Html.EditorFor(x => x.C)</td>
                 </tr>
                 <tr>
                     <td>D</td>
                     <td>15</td>
-                    <td> </td>
+                    <td>@Html.EditorFor(x => x.D)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="TotalAmount" name="command" /></td>
+                    <td>
+                        <h2 style="color:red;text-align:center;">
+                            @Html.DisplayFor(x => x.Result)
+                        </h2>
+                    </td>
                 </tr>
             </tbody>
         </table>
 
-        <br /><br />
-        <input type="submit" value="TotalAmount" name="command" />
-        <br /><br />
-        <h2 style="color:red">
-            @Html.Label("")
-        </h2>
     </fieldset>
 
 }
