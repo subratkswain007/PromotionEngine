@@ -1,4 +1,54 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@model PromotionEngine.Models.Unit
 
+<style type="text/css">
+    th,
+    td {
+        width: 100px;
+        overflow: hidden;
+    }
+</style>
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend style="color:blue"> Active Promotion offer </legend>
+        <table class="table-responsive">
+            <thead>
+                <tr>
+                    <th>SKUID</th>
+                    <th>UnitPrice</th>
+                    <th>No of Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>50</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>30</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>20</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>15</td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br /><br />
+        <input type="submit" value="TotalAmount" name="command" />
+        <br /><br />
+        <h2 style="color:red">
+            @Html.Label("")
+        </h2>
+    </fieldset>
+
+}
